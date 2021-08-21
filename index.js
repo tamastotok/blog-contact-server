@@ -13,9 +13,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Default route
-app.get("/", (req, res) => {
+/*app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname) + "/index.html");
-});
+});*/
 
 //  Check server status
 app.get("/status", (req, res) => {
