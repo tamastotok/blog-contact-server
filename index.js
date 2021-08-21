@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-
 const app = express();
+const path = require("path");
 const sendMail = require("./mail.js");
 const PORT = process.env.PORT || 8000;
 
