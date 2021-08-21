@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express();
-const path = require("path");
 const sendMail = require("./mail.js");
 const PORT = process.env.PORT || 8000;
 
@@ -14,7 +13,7 @@ app.use(express.json());
 
 // Default route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname) + "/index.html");
+  res.send({ error: "not-found" });
 });
 
 //  Check server status
