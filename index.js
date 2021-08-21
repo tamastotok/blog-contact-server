@@ -11,6 +11,11 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// Default route
+app.get("/", (req, res) => {
+  res.send("Contact form server");
+});
+
 //  Check server status
 app.get("/status", (req, res) => {
   res.sendStatus(200);
