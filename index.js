@@ -5,9 +5,14 @@ const app = express();
 const sendMail = require("./mail.js");
 const PORT = process.env.PORT || 8000;
 
+const options = {
+  origin: process.env.ORIGIN,
+  methods: ["GET", "POST"],
+};
+
 dotenv.config();
 
-app.use(cors());
+app.use(cors(options));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
